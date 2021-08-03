@@ -8,7 +8,11 @@ module.exports = {
   lintOnSave: true,
   configureWebpack: {
     // Set up all the aliases we use in our app.
-
+    resolve: {
+      alias: {
+        assets: resolveSrc('src/assets')
+      }
+    }
   },
   css: {
     // Enable CSS source maps.
